@@ -1,4 +1,4 @@
-const calendarService = require("../services/calendarService");
+import * as calendarService from "../services/calendarService.js";
 
 async function listeEvent() {
   const listarEventos = await calendarService.listeEvent();
@@ -14,13 +14,16 @@ async function createdEvent(evento) {
   const checkEvent = await calendarService.checkEvent(evento);
 
   if (checkEvent) {
-    console.log("Não passou");
-    return "evento ja cadastrado";
+    return ErrorEvent;
   }
 
-  console.log("Passou");
   const novoEvento = await calendarService.createdEvent(evento);
   return novoEvento;
+}
+
+async function deleteEvent(eventId) {
+  const deleteEvent = await calendarService.deleteEvent(eventId);
+  return deleteEvent;
 }
 
 async function getEventConfirmed(date) {
@@ -35,10 +38,11 @@ async function getAvailableTimes(date) {
   return listEventConfirmed;
 }
 
-module.exports = {
+export {
   listeEvent,
   listeEventFromDate,
   createdEvent,
+  deleteEvent,
   getEventConfirmed,
   getAvailableTimes,
 };

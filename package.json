@@ -1,15 +1,20 @@
 {
   "name": "barberbot",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.5.1",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "googleapis": "^127.0.0"
   }
