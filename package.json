@@ -16,6 +16,12 @@
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "googleapis": "^127.0.0"
+    "googleapis": "^127.0.0",
+    "nodemon": "^3.0.1",
+    "serverless-http": "^3.2.0",
+    "serverless-offline": "^13.2.0"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^6.0.0"
   }
 }
