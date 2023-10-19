@@ -3,13 +3,11 @@ import { CalendarController } from "../controllers/calendar.controller.js";
 import * as calendarFacade from "../facades/calendarFacade.js";
 
 const router = Router();
-
 const controller = new CalendarController();
 
 router.post("/createdEvent", controller.createdEvent);
 
 router.post("/deleteEvent", controller.deleteEvent);
-
 router.get("/listEvent", async (req, res) => {
   try {
     const lista = await calendarFacade.listeEvent();
